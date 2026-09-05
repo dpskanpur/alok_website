@@ -1,0 +1,13 @@
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: alok-website:latest
+    container_name: alok_website
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
