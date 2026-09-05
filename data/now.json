@@ -1,0 +1,27 @@
+{
+  "lastUpdated": "September 2024",
+  "location": "Bengaluru, India (IST)",
+  "sections": [
+    {
+      "category": "Building",
+      "items": [
+        "A lightweight embedded key-value database in Rust with pluggable storage engines.",
+        "Refining a minimal monospace canvas visualizer for distributed system traces."
+      ]
+    },
+    {
+      "category": "Reading & Studying",
+      "items": [
+        "Deep diving into Linux kernel eBPF tracing programs and memory page reclamation internals.",
+        "Rereading Hofstadter's Gödel, Escher, Bach."
+      ]
+    },
+    {
+      "category": "Experiments & Hobbies",
+      "items": [
+        "Fine-tuning home espresso extraction variables on washed Ethiopian beans.",
+        "Practicing tactical calculation in open Sicilian Defense lines on Lichess."
+      ]
+    }
+  ]
+}

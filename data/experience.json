@@ -1,0 +1,72 @@
+[
+  {
+    "period": "2024 — Present",
+    "role": "Manager — Platform Engineering & Security",
+    "company": "SADA, An Insight Company",
+    "location": "Trivandrum, India",
+    "highlights": [
+      "Lead Platform Engineering, Cloud Security, and SRE strategy for a 30+ member team, delivering 40+ enterprise client projects with 98% on-time success.",
+      "Spearhead cloud-native platform architectures, zero-trust security frameworks, and compliance guardrails across multi-cloud environments.",
+      "Boosted engineering throughput by 30% through AI adoption and reusable platform automation templates, eliminating operational toil.",
+      "Drove GCP modernization initiatives, improving scalability, resiliency, and system availability by ~40% through SRE-aligned observability.",
+      "Enabled $250K+ in direct cloud savings via architecture reviews, FinOps governance, and platform tooling optimization.",
+      "Built and scaled a high-performing engineering org by mentoring technical leads and aligning career growth with business objectives."
+    ]
+  },
+  {
+    "period": "2022 — 2024",
+    "role": "Enterprise Cloud Architect, SRE",
+    "company": "SADA, An Insight Company",
+    "location": "Remote, India",
+    "highlights": [
+      "Architected and delivered scalable, highly available GCP architectures for 12+ enterprise clients, boosting application performance by 35%.",
+      "Migrated 100+ workloads to Google Cloud, reducing client infrastructure operational costs by ~40% through right-sizing and automation.",
+      "Led technical pre-sales for 10+ major clients, influencing $500K+ in active pipeline by tailoring reliable multi-cloud solutions.",
+      "Advised executive C-level stakeholders on cloud modernization, driving $2M+ in transformation contracts."
+    ]
+  },
+  {
+    "period": "2021 — 2022",
+    "role": "Senior Cloud Platform Engineer, SRE",
+    "company": "SADA, An Insight Company",
+    "location": "Remote, India",
+    "highlights": [
+      "Accelerated product delivery cycles by 50% through standardized environment provisioning, automated CI/CD, and IaC templates.",
+      "Increased system reliability by 35% by embedding SRE principles: SLIs/SLOs, proactive observability, and automated self-healing.",
+      "Empowered 5+ cross-functional teams with scalable platform playbooks to ensure operational consistency."
+    ]
+  },
+  {
+    "period": "2019 — 2021",
+    "role": "Lead Cloud Support Engineer | Incident Manager",
+    "company": "SADA, An Insight Company",
+    "location": "Trivandrum, India",
+    "highlights": [
+      "Led resolution of high-severity P1/P2 incidents with MTTR under 2 hours, maintaining 95%+ SLA compliance.",
+      "Increased customer satisfaction (NPS) by 22% YoY through automated support workflows and customer self-service tools.",
+      "Constructed onboarding playbooks and engineering knowledge bases, reducing new hire ramp-up time by 40%."
+    ]
+  },
+  {
+    "period": "2015 — 2019",
+    "role": "Cloud & IT Operations Manager",
+    "company": "Delhi Public School, Kanpur",
+    "location": "Kanpur, India",
+    "highlights": [
+      "Modernized legacy infrastructure to GCP and cloud platforms, boosting institutional system efficiency by 50%.",
+      "Reduced IT ticket volume by 35% through proactive telemetry monitoring and automated preventive patching.",
+      "Executed Google Workspace implementation across 300+ staff and users, ensuring high uptime and seamless collaboration."
+    ]
+  },
+  {
+    "period": "2008 — 2015",
+    "role": "Academic Background & National Honor",
+    "company": "Master & Bachelor in Computer Applications",
+    "location": "India",
+    "highlights": [
+      "Master in Computer Applications (MCA) — APJ Abdul Kalam Technical University (First Division, 2013–2015).",
+      "Bachelor in Computer Applications (BCA) — CSJM University / UIET (First Division, 2008–2011).",
+      "Awarded LIC Golden Jubilee Scholarship Award — Selected among top 10 recipients nationwide for graduate studies."
+    ]
+  }
+]

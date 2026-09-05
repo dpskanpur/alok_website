@@ -1,0 +1,96 @@
+{
+  "readingLog": [
+    {
+      "id": "book-1",
+      "title": "Site Reliability Engineering: How Google Runs Production Systems",
+      "author": "Niall Richard Murphy, Betsy Beyer, Chris Jones, Jennifer Petoff",
+      "category": "GCP & SRE Foundations",
+      "year": "Essential",
+      "rating": "10/10",
+      "status": "Completed",
+      "takeaway": "The foundational blueprint for modern production operations, error budgets, blameless post-mortems, and eliminating operational toil.",
+      "quote": "\"Hope is not a strategy. Engineering discipline and well-defined SLOs are.\""
+    },
+    {
+      "id": "book-2",
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "category": "Distributed Systems",
+      "year": "Recommended",
+      "rating": "10/10",
+      "status": "Completed",
+      "takeaway": "The gold standard for understanding how distributed data stores, replication logs, and consensus protocols survive failures gracefully.",
+      "quote": "\"Reliability is continuing to work correctly, even when things go wrong.\""
+    },
+    {
+      "id": "book-3",
+      "title": "Building Secure and Reliable Systems",
+      "author": "Heather Adkins, Betsy Beyer, Paul Blankinship (Google Press)",
+      "category": "Cloud Security & SRE",
+      "year": "Essential",
+      "rating": "10/10",
+      "status": "Completed",
+      "takeaway": "How Google integrates security directly into site reliability engineering and systems design from day zero rather than as an afterthought.",
+      "quote": "\"Systems are only as reliable as they are secure, and only as secure as they are reliable.\""
+    },
+    {
+      "id": "book-4",
+      "title": "The Staff Engineer's Path",
+      "author": "Tanya Reilly",
+      "category": "Engineering Leadership",
+      "year": "Leadership Guide",
+      "rating": "9.5/10",
+      "status": "Completed",
+      "takeaway": "A pragmatic guide to navigating technical leadership, driving cross-team architectural consensus, and influencing organizational strategy.",
+      "quote": "\"Your job is not just to have good ideas, but to build shared understanding and momentum around them.\""
+    }
+  ],
+  "hardwareSetup": [
+    { "category": "Primary Workstation", "item": "Apple Silicon MacBook Pro (M-Series)", "spec": "32GB Unified Memory • Clean multi-cloud development & management environment" },
+    { "category": "Display Array", "item": "Dell UltraSharp 4K Monitor", "spec": "Color-accurate high-DPI display for telemetry graphs, architectural blueprints & code review" },
+    { "category": "Input Device", "item": "Logitech MX Master 3S + Ergonomic Mechanical Keyboard", "spec": "Tactile switches tuned for quiet, fatigue-free long engineering and planning sessions" },
+    { "category": "Audio & Calls", "item": "Sennheiser Studio Acoustic Monitoring", "spec": "Crystal-clear executive calls, remote team 1:1s, and deep-focus ambient listening" },
+    { "category": "Terminal Environment", "item": "Zsh + Tmux + Neovim", "spec": "Minimalist, keyboard-first environment optimized for high-speed GCP CLI operations and git workflows" },
+    { "category": "Cloud Lab", "item": "GCP Sandbox & Hybrid Homelab", "spec": "Multi-region Google Cloud projects testing zero-trust IAM, GKE clusters, and automated deployment pipelines" }
+  ],
+  "focusAudio": [
+    {
+      "title": "Music for 18 Musicians",
+      "artist": "Steve Reich",
+      "genre": "Minimalism / Modern Classical",
+      "tempo": "Rhythmic & Steady",
+      "notes": "Hypnotic, repeating rhythms that help enter and sustain long blocks of uninterrupted focus."
+    },
+    {
+      "title": "Immunity",
+      "artist": "Jon Hopkins",
+      "genre": "Melodic Electronic / Ambient",
+      "tempo": "Dynamic & Atmospheric",
+      "notes": "Warm acoustic textures and subtle electronic pulses that fuel creative problem solving."
+    },
+    {
+      "title": "Selected Ambient Works",
+      "artist": "Aphex Twin",
+      "genre": "Ambient Soundscapes",
+      "tempo": "Calm & Reflective",
+      "notes": "Gentle, unobtrusive soundscapes ideal for planning architecture and writing documentation."
+    }
+  ],
+  "obsessions": [
+    {
+      "title": "Chess & Strategic Play",
+      "metric": "Analytical Mindset",
+      "description": "Playing competitive chess sharpens pattern recognition, positional patience, and risk mitigation—skills that directly translate to systems architecture and incident management."
+    },
+    {
+      "title": "Specialty Coffee Science",
+      "metric": "Precision Ritual",
+      "description": "Dialing in water temperature, grind distribution, and extraction time to brew clean, balanced pour-overs every morning."
+    },
+    {
+      "title": "Hybrid Cloud Labs & Self-Hosting",
+      "metric": "Hands-on Architecture",
+      "description": "Prototyping cloud-native tooling, local Kubernetes environments, and VPN mesh backplanes to test new SRE patterns before production deployment."
+    }
+  ]
+}

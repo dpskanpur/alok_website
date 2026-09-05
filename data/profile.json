@@ -1,0 +1,40 @@
+{
+  "name": "Alok Kumar Singh",
+  "handle": "aks2103",
+  "domain": "alok.dev",
+  "avatar": "/images/alok.jpg",
+  "title": "Engineering Leader — Cloud Platform & Security",
+  "company": "SADA, An Insight Company",
+  "location": "Chandigarh / Trivandrum, India",
+  "timezone": "Asia/Kolkata (UTC+5:30)",
+  "resumeUrl": "https://flowcv.com/resume/fl37r5sdsr",
+  "status": {
+    "indicator": "active",
+    "text": "Leading Teams in Cloud Platform Engineering, Security & Agentic AI Automation",
+    "availability": "Open for Director of Platform Engineering, Practice Leadership & Executive Advisory"
+  },
+  "bio": {
+    "headline": "Engineering Leader & Practice Builder driving Enterprise Cloud Modernization, Zero-Trust Security, and Agentic AI.",
+    "intro": "Engineering Leader at SADA (An Insight Company) leading cross-functional practices of 30+ engineers. I blend deep technical architecture in Google Cloud, SRE, and Agentic AI with strategic practice leadership: scaling talent, operationalizing delivery models, and partnering with C-suite executives to translate enterprise technology investments into measurable business expansion ($2M+ influenced, 98% on-time execution).",
+    "quote": "\"True practice leadership is where engineering rigor meets strategic business vision: building repeatable architectures, empowering autonomous high-trust teams, and pioneering AI-driven velocity to turn complex technology challenges into durable competitive advantages.\""
+  },
+  "metrics": [
+    { "label": "Engineers Led Across Platform & Security Practice", "value": "30+" },
+    { "label": "Enterprise Client Deliveries (98% On-Time)", "value": "40+" },
+    { "label": "Velocity Boost via Agentic AI & Automation", "value": "+30%" },
+    { "label": "Strategic Modernization Pipelines Influenced", "value": "$2M+" }
+  ],
+  "certifications": [
+    { "title": "Google Cloud Certified Professional Cloud Architect", "issuer": "Google Cloud" },
+    { "title": "Google Cloud Certified Professional Cloud Security Engineer", "issuer": "Google Cloud" },
+    { "title": "Google Cloud Certified Associate Cloud Engineer", "issuer": "Google Cloud" },
+    { "title": "New Relic Advanced Practitioner", "issuer": "New Relic" },
+    { "title": "LIC Golden Jubilee Scholarship Award", "issuer": "Top 10 Recipients Nationwide" }
+  ],
+  "socials": [
+    { "platform": "LinkedIn", "handle": "in/aks2103", "url": "https://www.linkedin.com/in/aks2103/", "icon": "linkedin" },
+    { "platform": "Resume", "handle": "FlowCV Resume", "url": "https://flowcv.com/resume/fl37r5sdsr", "icon": "file-text" },
+    { "platform": "Email", "handle": "aks2103@gmail.com", "url": "mailto:aks2103@gmail.com", "icon": "mail" },
+    { "platform": "Phone", "handle": "+91 9389232352", "url": "tel:9389232352", "icon": "phone" }
+  ]
+}

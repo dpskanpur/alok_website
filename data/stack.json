@@ -1,0 +1,31 @@
+{
+  "categories": [
+    {
+      "name": "Practice Leadership & Strategic Vision",
+      "items": [
+        { "name": "Practice Building & Org Design", "detail": "Structured & scaled 30+ member engineering org across Platform, Security & SRE pods with 98% on-time delivery", "level": "Director Ready" },
+        { "name": "C-Suite & Executive Advisory", "detail": "Trusted advisor to enterprise CTOs and VPs on cloud modernization roadmaps, driving $2M+ in pipeline & contracts", "level": "Strategic" },
+        { "name": "Technical Pre-Sales & Solutioning", "detail": "Led multi-cloud enterprise RFP pitches and solution architectures influencing $500K+ in direct new client wins", "level": "Pre-Sales Lead" },
+        { "name": "FinOps & Commercial Governance", "detail": "Built governance frameworks unlocking $250K+ in direct cloud savings via architectural rightsizing and FinOps", "level": "FinOps Lead" }
+      ]
+    },
+    {
+      "name": "Cloud Architecture & Security Engineering",
+      "items": [
+        { "name": "Google Cloud Platform (GCP)", "detail": "Dual-Certified Professional Cloud Architect & Cloud Security Engineer leading multi-region enterprise foundations", "level": "Principal Level" },
+        { "name": "Enterprise GKE & Platform Orchestration", "detail": "Production Kubernetes platforms, cluster autoscaling, multi-tenant isolation, and Service Mesh", "level": "Expert" },
+        { "name": "Zero-Trust Security & Compliance", "detail": "IAM least-privilege automation, posture management, SOC2/ISO audit guardrails, and cryptographic controls", "level": "Expert" },
+        { "name": "Terraform IaC & Developer Platforms", "detail": "Standardized, reusable infrastructure blueprints accelerating client onboarding and environment parity", "level": "Core" }
+      ]
+    },
+    {
+      "name": "Agentic AI & Engineering Velocity",
+      "items": [
+        { "name": "Agentic AI in Cloud Operations", "detail": "Directed pioneering autonomous agent pipelines for automated incident triage, log synthesis, and self-healing", "level": "Active Vision" },
+        { "name": "Engineering Throughput Acceleration", "detail": "Lifted practice engineering velocity by +30% by eliminating repetitive toil via intelligent tool-calling workflows", "level": "Proven Impact" },
+        { "name": "SRE Principles & Production Health", "detail": "Institutionalized SLIs/SLOs, blameless post-mortems, and proactive telemetry (New Relic / Prometheus)", "level": "Operational Rigor" },
+        { "name": "People Mentorship & Talent Bench", "detail": "Mentored 10+ tech leads, established engineering career ladders, and built resilient succession benches", "level": "Continuous" }
+      ]
+    }
+  ]
+}

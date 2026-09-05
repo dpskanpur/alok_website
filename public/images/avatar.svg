@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#f4f4f5"/>
+  <defs>
+    <pattern id="dotGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#d4d4d8" />
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#dotGrid)" opacity="0.6"/>
+  
+  <!-- Silhouette / Stylized Portrait -->
+  <g fill="none" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Frame border -->
+    <rect x="15" y="15" width="370" height="370" stroke="#000000" stroke-width="2" fill="none" />
+    <rect x="22" y="22" width="356" height="356" stroke="#e4e4e7" stroke-width="1" fill="none" />
+    
+    <!-- Stylized Head & Shoulders -->
+    <path d="M120 340 C120 270, 160 250, 200 250 C240 250, 280 270, 280 340" fill="#18181b" stroke="#000000" stroke-width="3"/>
+    <circle cx="200" cy="180" r="55" fill="#27272a" stroke="#000000" stroke-width="3"/>
+    
+    <!-- Minimalist Face / Glasses Detail -->
+    <rect x="170" y="165" width="24" height="18" rx="2" stroke="#ffffff" stroke-width="2.5" fill="#000000"/>
+    <rect x="206" y="165" width="24" height="18" rx="2" stroke="#ffffff" stroke-width="2.5" fill="#000000"/>
+    <line x1="194" y1="174" x2="206" y2="174" stroke="#ffffff" stroke-width="2.5"/>
+    <line x1="155" y1="170" x2="170" y2="170" stroke="#ffffff" stroke-width="2"/>
+    <line x1="230" y1="170" x2="245" y2="170" stroke="#ffffff" stroke-width="2"/>
+    
+    <!-- Collar & Tie / Jacket -->
+    <path d="M185 250 L200 280 L215 250" stroke="#ffffff" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Monospace Label -->
+  <rect x="30" y="325" width="130" height="26" fill="#000000" />
+  <text x="40" y="342" font-family="monospace" font-size="11" font-weight="bold" fill="#ffffff" letter-spacing="1">ALOK SINGH</text>
+  <text x="350" y="50" font-family="monospace" font-size="10" fill="#71717a" text-anchor="end">IMG_01.RAW</text>
+</svg>

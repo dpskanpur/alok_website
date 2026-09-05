@@ -1,0 +1,58 @@
+[
+  {
+    "id": "project-01",
+    "title": "Agentic AI & Autonomous CloudOps Workflows",
+    "category": "agentic-ai",
+    "year": "2024 — Present",
+    "featured": true,
+    "tagline": "Directed engineering teams in pioneering agentic AI workflows and intelligent automation for autonomous cloud operations and self-healing systems.",
+    "businessImpact": "Boosted overall engineering velocity by 30%, automated recurring incident triaging, and slashed manual toil across 30+ member engineering operations.",
+    "architecture": "Orchestrated autonomous agent pipelines leveraging LLM tool-calling for log synthesis, automated root cause analysis (RCA), and safe remediation runbooks integrated with Prometheus & New Relic.",
+    "stack": ["Agentic AI", "LLM Tool-Calling", "Autonomous Workflows", "Platform Intelligence", "Python"],
+    "github": "https://www.linkedin.com/in/aks2103/",
+    "demo": "https://flowcv.com/resume/fl37r5sdsr",
+    "snippet": "# Agentic Incident Triage Worker Definition\nclass IncidentAgent:\n    def __init__(self, telemetry_tools, runbook_engine):\n        self.tools = [telemetry_tools.query_metrics, runbook_engine.execute_remediation]\n        self.agent = initialize_agent(self.tools, role=\"Autonomous SRE Triage\")\n        \n    async def evaluate_alert(self, alert_context):\n        plan = await self.agent.reason_and_act(alert_context)\n        return plan.execute_verified_safe_actions()"
+  },
+  {
+    "id": "project-02",
+    "title": "Enterprise Cloud Platform Modernization & 100+ Workload Migration",
+    "category": "platform-engineering",
+    "year": "2023 — 2024",
+    "featured": true,
+    "tagline": "Led platform architecture and delivery teams migrating 100+ mission-critical enterprise workloads to modern Google Cloud infrastructure.",
+    "businessImpact": "Migrated 100+ enterprise workloads with zero critical downtime, reducing client infrastructure operating expenses by ~40% and increasing system resiliency by 35%.",
+    "architecture": "Architected standardized internal developer platforms (IDP) utilizing Kubernetes (GKE), modular Terraform pipelines, and automated zero-downtime database replication.",
+    "stack": ["Google Cloud (GCP)", "Kubernetes (GKE)", "Terraform IaC", "Platform Architecture", "FinOps"],
+    "github": "https://www.linkedin.com/in/aks2103/",
+    "demo": "https://flowcv.com/resume/fl37r5sdsr",
+    "snippet": "# Terraform Standardized Platform Module\nmodule \"internal_platform_cluster\" {\n  source             = \"./modules/gke-enterprise-platform\"\n  environment        = \"production\"\n  enable_workload_id = true\n  autoscaling_profile= \"OPTIMIZE_UTILIZATION\"\n  compliance_tags    = [\"soc2\", \"hipaa\", \"zero-trust\"]\n}"
+  },
+  {
+    "id": "project-03",
+    "title": "Zero-Trust Cloud Security & $250K+ Enterprise FinOps",
+    "category": "security-finops",
+    "year": "2023 — 2024",
+    "featured": true,
+    "tagline": "Spearheaded cloud security posture management and financial operations across complex multi-cloud enterprise footprints.",
+    "businessImpact": "Directly unlocked $250K+ in recurring cloud savings while hardening security compliance across SOC2 and ISO standards with zero breaches.",
+    "architecture": "Enforced zero-trust identity policies, automated IAM privilege pruning, automated cloud cost telemetry, and commitment utilization governance.",
+    "stack": ["Cloud Security", "Zero-Trust Architecture", "FinOps", "BigQuery Telemetry", "GCP IAM"],
+    "github": "https://www.linkedin.com/in/aks2103/",
+    "demo": "https://flowcv.com/resume/fl37r5sdsr",
+    "snippet": "// Security & Cost Telemetry Aggregation\nSELECT \n    project_id, \n    service_name, \n    security_policy_compliance_status,\n    SUM(cost_in_usd) as monthly_burn\nFROM cloud_governance.enterprise_telemetry\nGROUP BY 1, 2, 3 HAVING monthly_burn > 5000;"
+  },
+  {
+    "id": "project-04",
+    "title": "Practice Leadership, Org Scaling & 98% On-Time Enterprise Delivery",
+    "category": "engineering-leadership",
+    "year": "2022 — Present",
+    "featured": true,
+    "tagline": "Built and directed cross-functional Platform, Security, and SRE practices to 30+ engineers, executing 40+ client deliverables with 98% on-time success.",
+    "businessImpact": "Directly influenced $2M+ in strategic modernization pipeline, established reusable enterprise delivery blueprints, maintained sub-2h MTTR for major incidents, and scaled practice billability and client retention.",
+    "architecture": "Institutionalized practice operating models: autonomous engineering pods, technical pre-sales alignment, SRE reliability gates, and structured career ladders from Engineer to Principal.",
+    "stack": ["Practice Leadership", "Director Vision", "Executive Advisory", "Org Scaling", "Pre-Sales", "OKRs"],
+    "github": "https://www.linkedin.com/in/aks2103/",
+    "demo": "https://flowcv.com/resume/fl37r5sdsr",
+    "snippet": "Practice Director Operating Model:\n1. Practice Strategy & P&L Alignment: Connect platform offerings directly with enterprise modernization budgets ($2M+ influenced)\n2. High-Trust Pod Execution: Autonomous pods with self-service CI/CD & agentic tooling\n3. Quality & Governance: 98% on-time client execution with zero-trust compliance standards"
+  }
+]
