@@ -39,24 +39,24 @@ export default function Hero() {
           {/* Left Column: Headline, Bio & CTAs */}
           <div className="lg:col-span-8 space-y-6">
             {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-zinc-100 border border-black font-mono text-xs text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-              <Sparkles size={13} className="text-black" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-100 border border-black font-mono text-xs sm:text-sm text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              <Sparkles size={15} className="text-black shrink-0" />
               <span className="font-bold">PRACTICE LEADERSHIP & VISION:</span>
               <span className="text-zinc-800 font-sans">Cloud Modernization • Practice Building • Agentic AI</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-sans font-bold tracking-tight text-black leading-[1.12]">
+            <h1 className="text-4xl sm:text-6xl lg:text-[4rem] font-sans font-extrabold tracking-tight text-black leading-[1.08]">
               Building & leading enterprise practices at the intersection of Cloud, Security & AI.
             </h1>
 
             {/* Subtitle / Plain English Bio */}
-            <p className="text-base sm:text-lg text-zinc-600 font-sans leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-zinc-700 font-sans leading-relaxed max-w-3xl">
               {profileData.bio.intro}
             </p>
 
             {/* Leadership Quote Block */}
-            <div className="p-4 bg-zinc-50 border-l-4 border-black text-xs sm:text-sm font-sans text-zinc-800 italic shadow-sm">
+            <div className="p-4 sm:p-5 bg-zinc-50 border-l-4 border-black text-sm sm:text-base font-sans text-zinc-800 italic shadow-sm leading-relaxed">
               {profileData.bio.quote}
             </div>
 
