@@ -44,18 +44,31 @@ export default function ExperienceSection() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-1">
-            {profileData.certifications.map((cert, idx) => (
-              <div
-                key={idx}
-                className="p-3 bg-white border border-zinc-300 flex items-start space-x-2.5 shadow-sm hover:border-black transition-colors"
-              >
-                <CheckCircle size={14} className="text-black shrink-0 mt-0.5" />
-                <div className="space-y-0.5">
-                  <div className="font-bold text-black text-xs leading-snug">{cert.title}</div>
-                  <div className="text-[10px] text-zinc-500 font-mono">{cert.issuer}</div>
+            {profileData.certifications.map((cert, idx) => {
+              const isGCP = cert.issuer.includes("Google");
+              const isAWS = cert.issuer.includes("AWS") || cert.title.includes("AWS");
+              const isAzure = cert.issuer.includes("Azure") || cert.title.includes("Azure");
+              const badgeBorder = isGCP 
+                ? "border-l-4 border-l-[#4285F4]" 
+                : isAWS 
+                ? "border-l-4 border-l-[#FF9900]" 
+                : isAzure 
+                ? "border-l-4 border-l-[#0078D4]" 
+                : "border-l-4 border-l-black";
+
+              return (
+                <div
+                  key={idx}
+                  className={`p-3 bg-white border border-zinc-200 ${badgeBorder} rounded-r flex items-start space-x-2.5 shadow-xs hover:border-zinc-400 transition-colors`}
+                >
+                  <CheckCircle size={14} className={isGCP ? "text-[#4285F4] shrink-0 mt-0.5" : isAWS ? "text-[#FF9900] shrink-0 mt-0.5" : isAzure ? "text-[#0078D4] shrink-0 mt-0.5" : "text-black shrink-0 mt-0.5"} />
+                  <div className="space-y-0.5">
+                    <div className="font-semibold text-black text-xs leading-snug">{cert.title}</div>
+                    <div className="text-[11px] text-zinc-500 font-sans">{cert.issuer}</div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

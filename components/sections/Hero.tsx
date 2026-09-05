@@ -36,14 +36,18 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Hero Grid: Content + Executive Portrait */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        {/* Hero Grid: Content + Frameless Floating Portrait */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Headline, Executive Bio & CTAs */}
-          <div className="lg:col-span-8 space-y-7">
-            {/* Focus Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 border border-zinc-300 rounded-full text-xs text-zinc-800 font-medium">
-              <Sparkles size={13} className="text-black shrink-0" />
-              <span>Cloud Platform • Zero-Trust Security • Agentic AI</span>
+          <div className="lg:col-span-8 space-y-6">
+            {/* Focus Tag with Multi-Cloud Accents */}
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-zinc-50 border border-zinc-200 rounded-full text-xs text-zinc-800 font-medium shadow-xs">
+              <span className="flex items-center space-x-1">
+                <span className="h-2 w-2 rounded-full bg-[#4285F4]" title="Google Cloud"></span>
+                <span className="h-2 w-2 rounded-full bg-[#FF9900]" title="AWS"></span>
+                <span className="h-2 w-2 rounded-full bg-[#0078D4]" title="Azure"></span>
+              </span>
+              <span>Google Cloud • AWS • Azure • Zero-Trust • Agentic AI</span>
             </div>
 
             {/* Headline */}
@@ -61,73 +65,91 @@ export default function Hero() {
               {profileData.bio.quote}
             </div>
 
-            {/* Action Buttons */}
-            <div className="pt-2 flex flex-wrap items-center gap-3 text-sm">
+            {/* Action Buttons: Clean, Single Line with Google, AWS & Azure Palette */}
+            <div className="pt-2 flex items-center gap-2.5 text-xs sm:text-sm overflow-x-auto no-scrollbar py-1">
+              {/* Google Cloud Blue Button */}
               <a
                 href="#work"
-                className="inline-flex items-center space-x-2 px-5 py-2.5 bg-black text-white font-medium hover:bg-zinc-800 transition-colors rounded shadow-sm"
+                className="inline-flex items-center space-x-1.5 px-4 py-2 bg-[#4285F4] text-white font-medium hover:bg-[#3367D6] transition-colors rounded shadow-xs whitespace-nowrap shrink-0"
               >
                 <span>View Practice Impact</span>
-                <ArrowDown size={15} />
+                <ArrowDown size={14} />
               </a>
 
+              {/* AWS Orange Accent Button */}
               <a
                 href={profileData.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-5 py-2.5 bg-white text-black font-medium hover:bg-zinc-100 transition-colors border border-zinc-300 rounded shadow-sm"
+                className="inline-flex items-center space-x-1.5 px-3.5 py-2 bg-white text-[#D97706] hover:text-[#B45309] font-medium hover:bg-amber-50 transition-colors border border-[#FF9900]/40 rounded shadow-xs whitespace-nowrap shrink-0"
               >
-                <FileText size={15} />
-                <span>Executive Resume</span>
-                <ExternalLink size={13} className="text-zinc-400" />
+                <FileText size={14} className="text-[#FF9900]" />
+                <span>Resume</span>
+                <ExternalLink size={12} className="text-[#FF9900]/70" />
               </a>
 
+              {/* Azure Blue Accent Button */}
               <a
                 href="#contact"
-                className="inline-flex items-center space-x-2 px-4 py-2.5 bg-zinc-100 text-zinc-800 hover:text-black hover:bg-zinc-200 transition-colors border border-zinc-200 rounded"
+                className="inline-flex items-center space-x-1.5 px-3.5 py-2 bg-sky-50 text-[#0078D4] hover:bg-sky-100 transition-colors border border-[#0078D4]/30 rounded whitespace-nowrap shrink-0 font-medium"
               >
-                <Mail size={15} />
+                <Mail size={14} className="text-[#0078D4]" />
                 <span>Contact</span>
               </a>
 
+              {/* Google Green Accent Button */}
               <button
                 onClick={copyEmail}
-                className="inline-flex items-center space-x-2 px-4 py-2.5 bg-zinc-100 text-zinc-800 hover:text-black hover:bg-zinc-200 transition-colors border border-zinc-200 rounded"
+                className="inline-flex items-center space-x-1.5 px-3 py-2 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 transition-colors border border-emerald-200 rounded whitespace-nowrap shrink-0 font-medium"
               >
-                {copied ? <Check size={15} className="text-black" /> : <Copy size={15} />}
-                <span>{copied ? "Email copied!" : "Copy Email"}</span>
+                {copied ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} className="text-emerald-700" />}
+                <span>{copied ? "Copied" : "Copy Email"}</span>
               </button>
             </div>
           </div>
 
-          {/* Right Column: Refined Executive Portrait Frame */}
-          <div className="lg:col-span-4 flex flex-col items-center lg:items-end">
-            <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none">
-              {/* Image Frame with Clean Border & Subtle Shadow */}
-              <div className="relative bg-white p-2.5 border border-zinc-300 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                {/* Image Container */}
-                <div className="relative aspect-square w-full bg-zinc-100 overflow-hidden rounded">
+          {/* Right Column: High-End Nerdy Technical Architecture Frame */}
+          <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
+            <div className="relative group w-full max-w-[280px] sm:max-w-[300px]">
+              {/* Outer Technical Frame with Hairline Border & Subtle Shadow */}
+              <div className="relative bg-white border border-zinc-300 rounded-lg p-2.5 shadow-sm group-hover:shadow-md transition-all duration-300">
+                {/* Portrait Container with HUD Precision Registration Marks */}
+                <div className="relative aspect-[4/5] w-full rounded overflow-hidden bg-zinc-100 border border-zinc-200">
                   <img
                     src={profileData.avatar}
                     alt={profileData.name}
-                    className="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-500 ease-out"
                   />
+
+                  {/* Corner HUD Technical Optical Brackets */}
+                  {/* Top-Left: GCP Blue */}
+                  <div className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#4285F4] pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                  {/* Top-Right: AWS Orange */}
+                  <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-[#FF9900] pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                  {/* Bottom-Left: Azure Blue */}
+                  <div className="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-[#0078D4] pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                  {/* Bottom-Right: GCP Green */}
+                  <div className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#34A853] pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity"></div>
                 </div>
 
-                {/* Caption */}
-                <div className="pt-2.5 px-1 flex items-center justify-between text-xs text-zinc-600 border-t border-zinc-100 mt-2">
-                  <span className="font-semibold text-black">{profileData.name}</span>
-                  <span className="text-zinc-500 font-mono text-[11px]">PRACTICE LEADER</span>
+                {/* Tech Bottom Telemetry / Professional Practice Bar */}
+                <div className="pt-2.5 mt-2 border-t border-zinc-100 space-y-1.5 font-mono text-[11px]">
+                  <div className="flex items-center justify-between text-zinc-700">
+                    <span className="font-semibold text-black font-sans text-xs">{profileData.name}</span>
+                    <span className="text-[10px] text-[#0078D4] bg-sky-50 px-2 py-0.5 rounded border border-[#0078D4]/20 font-semibold">PRACTICE LEADER</span>
+                  </div>
+                  <div className="flex items-center justify-between text-[10px] text-zinc-600 pt-0.5">
+                    <span className="flex items-center space-x-1">
+                      <span className="text-zinc-400">SPEC:</span>
+                      <span className="text-[#4285F4] font-medium">GCP</span>
+                      <span>•</span>
+                      <span className="text-[#D97706] font-medium">AWS</span>
+                      <span>•</span>
+                      <span className="text-[#0078D4] font-medium">AZURE</span>
+                    </span>
+                    <span className="text-[#34A853] font-bold bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200/60">98% ON-TIME</span>
+                  </div>
                 </div>
-              </div>
-
-              {/* Practice Sub-card note */}
-              <div className="mt-3 p-3 bg-zinc-50 border border-zinc-200 rounded-lg text-xs text-zinc-700 flex items-center justify-between shadow-sm">
-                <span className="flex items-center space-x-2 font-medium text-black">
-                  <Users size={15} className="text-zinc-700" />
-                  <span>30+ Practice Engineers</span>
-                </span>
-                <span className="text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 text-[11px]">98% On-Time</span>
               </div>
             </div>
           </div>

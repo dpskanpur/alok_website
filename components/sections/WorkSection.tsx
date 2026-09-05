@@ -89,15 +89,23 @@ export default function WorkSection() {
                   className="p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between cursor-pointer select-none gap-4"
                 >
                   <div className="space-y-2 flex-1">
-                    <div className="flex items-center space-x-2.5 font-mono text-xs">
+                    <div className="flex items-center space-x-2.5 font-sans text-xs">
                       <span className="text-black font-bold">Initiative 0{index + 1}</span>
-                      <span className="px-2 py-0.5 bg-zinc-100 border border-zinc-300 text-[10px] uppercase text-zinc-800 font-semibold">
-                        {project.category}
+                      <span className={`px-2 py-0.5 border text-[10px] uppercase font-semibold rounded ${
+                        project.category === "platform-engineering" 
+                          ? "bg-blue-50 border-blue-200 text-[#4285F4]" 
+                          : project.category === "security-finops" 
+                          ? "bg-amber-50 border-amber-200 text-[#FF9900]" 
+                          : project.category === "agentic-ai"
+                          ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+                          : "bg-sky-50 border-sky-200 text-[#0078D4]"
+                      }`}>
+                        {project.category.replace("-", " ")}
                       </span>
-                      <span className="text-zinc-500 font-sans">{project.year}</span>
+                      <span className="text-zinc-500">{project.year}</span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-sans font-bold text-black group-hover:opacity-75 transition-opacity">
+                    <h3 className="text-lg sm:text-xl font-sans font-bold text-black group-hover:text-zinc-700 transition-colors">
                       {project.title}
                     </h3>
 
@@ -107,8 +115,8 @@ export default function WorkSection() {
                     </p>
 
                     {/* Measurable Business & Velocity Impact */}
-                    <div className="flex items-center space-x-2 text-xs font-sans text-zinc-900 bg-zinc-100 px-3 py-1.5 border border-black w-fit shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
-                      <TrendingUp size={14} className="text-black shrink-0" />
+                    <div className="flex items-center space-x-2 text-xs font-sans text-zinc-900 bg-zinc-50 px-3 py-1.5 border border-zinc-200 rounded w-fit shadow-xs">
+                      <TrendingUp size={14} className="text-[#34A853] shrink-0" />
                       <span><strong>Impact & ROI:</strong> {project.businessImpact}</span>
                     </div>
                   </div>

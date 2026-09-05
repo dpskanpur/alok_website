@@ -21,6 +21,25 @@ const config: Config = {
           dark: "#27272a",
           black: "#000000",
         },
+        cloud: {
+          gcp: {
+            blue: "#4285F4",
+            red: "#EA4335",
+            yellow: "#FBBC05",
+            green: "#34A853",
+            subtle: "#E8F0FE",
+          },
+          aws: {
+            orange: "#FF9900",
+            squid: "#232F3E",
+            subtle: "#FFF4E5",
+          },
+          azure: {
+            blue: "#0078D4",
+            dark: "#002456",
+            subtle: "#EFF6FC",
+          },
+        },
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "Inter", "system-ui", "-apple-system", "sans-serif"],

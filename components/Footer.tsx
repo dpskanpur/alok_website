@@ -141,7 +141,7 @@ export default function Footer() {
         {/* Bottom Colophon Bar */}
         <div className="pt-6 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-zinc-500">
           <div className="flex items-center space-x-2">
-            <span>© {new Date().getFullYear()} {profileData.name}.</span>
+            <span suppressHydrationWarning>© {new Date().getFullYear()} {profileData.name}.</span>
             <span>All rights reserved.</span>
           </div>
 
