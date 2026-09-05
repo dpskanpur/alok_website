@@ -60,14 +60,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#hobbies" className="text-zinc-600 hover:text-black hover:underline flex items-center justify-between">
-                  <span>04. Mindset & Rituals</span>
-                  <span className="text-zinc-400">↗</span>
-                </a>
-              </li>
-              <li>
                 <a href="#contact" className="text-zinc-600 hover:text-black hover:underline flex items-center justify-between">
-                  <span>05. Direct Contact</span>
+                  <span>04. Direct Contact</span>
                   <span className="text-zinc-400">↗</span>
                 </a>
               </li>

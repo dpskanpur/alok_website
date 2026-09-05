@@ -56,22 +56,19 @@ export default function Header({ onOpenCommand }: HeaderProps) {
         </div>
 
         {/* Right: Section Links & Command Menu Trigger */}
-        <div className="flex items-center space-x-4">
-          <nav className="hidden lg:flex items-center space-x-4 text-xs font-mono">
+        <div className="flex items-center space-x-5">
+          <nav className="hidden lg:flex items-center space-x-5 text-xs font-sans font-medium">
             <a href="#work" className="text-zinc-600 hover:text-black transition-colors">
-              [Work]
+              Work
             </a>
             <a href="#experience" className="text-zinc-600 hover:text-black transition-colors">
-              [Experience]
+              Experience
             </a>
             <a href="#stack" className="text-zinc-600 hover:text-black transition-colors">
-              [Skills]
-            </a>
-            <a href="#hobbies" className="text-zinc-600 hover:text-black transition-colors">
-              [Interests]
+              Skills
             </a>
             <a href="#contact" className="text-zinc-600 hover:text-black transition-colors">
-              [Contact]
+              Contact
             </a>
           </nav>
 
@@ -80,21 +77,21 @@ export default function Header({ onOpenCommand }: HeaderProps) {
             href={profileData.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center space-x-1 px-2.5 py-1 border border-zinc-300 hover:border-black text-xs font-sans text-zinc-700 hover:text-black transition-colors"
+            className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 border border-zinc-300 hover:border-black rounded text-xs font-sans text-zinc-800 hover:text-black transition-colors"
           >
-            <FileText size={12} />
+            <FileText size={13} />
             <span>Resume</span>
           </a>
 
           {/* Command Menu Button */}
           <button
             onClick={onOpenCommand}
-            className="flex items-center space-x-1.5 px-2.5 py-1 text-xs border border-black text-black bg-white hover:bg-black hover:text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none font-mono"
+            className="flex items-center space-x-1.5 px-2.5 py-1.5 text-xs border border-zinc-300 hover:border-black rounded text-zinc-800 hover:text-black bg-zinc-50 hover:bg-zinc-100 transition-all font-sans"
             title="Open Quick Navigation Menu"
           >
             <Command size={12} />
-            <span className="font-semibold hidden sm:inline">Menu</span>
-            <kbd className="text-[10px] opacity-75">⌘K</kbd>
+            <span className="font-medium hidden sm:inline">Menu</span>
+            <kbd className="text-[10px] text-zinc-500 font-mono ml-1">⌘K</kbd>
           </button>
         </div>
       </div>

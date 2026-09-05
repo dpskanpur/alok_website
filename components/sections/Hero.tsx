@@ -14,135 +14,131 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-10 sm:pt-14 pb-16 border-b border-black overflow-hidden bg-white px-4 sm:px-6">
-      {/* Background Subtle Grid */}
-      <div className="absolute inset-0 bg-bw-grid pointer-events-none opacity-60" />
-
+    <section className="relative pt-12 sm:pt-16 pb-16 border-b border-zinc-200 bg-white px-4 sm:px-6">
       <div className="relative w-full">
         {/* Top Status & Location Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-8 border-b border-zinc-200 font-mono text-xs text-zinc-500">
+        <div className="flex flex-wrap items-center justify-between gap-3 pb-6 mb-10 border-b border-zinc-200 text-xs sm:text-sm">
           <div className="flex items-center space-x-2">
-            <span className="text-black font-bold">CURRENT LEADERSHIP:</span>
-            <span className="text-zinc-900 font-sans font-semibold">{profileData.title} @ {profileData.company}</span>
+            <span className="text-zinc-500 font-medium">Currently:</span>
+            <span className="text-black font-semibold">{profileData.title}</span>
+            <span className="text-zinc-400">@</span>
+            <span className="text-black font-semibold">{profileData.company}</span>
           </div>
-          <div className="flex items-center space-x-4">
-            <span className="flex items-center space-x-1">
-              <MapPin size={12} className="text-black" />
-              <span className="text-zinc-700 font-sans">{profileData.location}</span>
+          <div className="flex items-center space-x-5 text-zinc-600">
+            <span className="flex items-center space-x-1.5">
+              <MapPin size={14} className="text-black" />
+              <span>{profileData.location}</span>
             </span>
-            <span>STATUS: <strong className="text-black font-sans font-semibold">● Open for Strategic Leadership Roles</strong></span>
+            <span className="flex items-center space-x-1.5 font-medium text-black">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 inline-block"></span>
+              <span>Open for Practice Leadership / Director Roles</span>
+            </span>
           </div>
         </div>
 
-        {/* Hero Grid: Content + Responsive Portrait */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          {/* Left Column: Headline, Bio & CTAs */}
-          <div className="lg:col-span-8 space-y-6">
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-100 border border-black font-mono text-xs sm:text-sm text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-              <Sparkles size={15} className="text-black shrink-0" />
-              <span className="font-bold">PRACTICE LEADERSHIP & VISION:</span>
-              <span className="text-zinc-800 font-sans">Cloud Modernization • Practice Building • Agentic AI</span>
+        {/* Hero Grid: Content + Executive Portrait */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          {/* Left Column: Headline, Executive Bio & CTAs */}
+          <div className="lg:col-span-8 space-y-7">
+            {/* Focus Tag */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 border border-zinc-300 rounded-full text-xs text-zinc-800 font-medium">
+              <Sparkles size={13} className="text-black shrink-0" />
+              <span>Cloud Platform • Zero-Trust Security • Agentic AI</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[4rem] font-sans font-extrabold tracking-tight text-black leading-[1.08]">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-black leading-snug">
               Building & leading enterprise practices at the intersection of Cloud, Security & AI.
             </h1>
 
-            {/* Subtitle / Plain English Bio */}
-            <p className="text-lg sm:text-xl text-zinc-700 font-sans leading-relaxed max-w-3xl">
-              {profileData.bio.intro}
+            {/* Executive Bio */}
+            <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed max-w-2xl">
+              Engineering Leader at SADA (An Insight Company) leading cross-functional practices of 30+ engineers. I blend deep architecture in Google Cloud, SRE, and Agentic AI with strategic practice leadership: scaling talent, operationalizing delivery models, and partnering with executives to convert technology investments into measurable enterprise outcomes.
             </p>
 
             {/* Leadership Quote Block */}
-            <div className="p-4 sm:p-5 bg-zinc-50 border-l-4 border-black text-sm sm:text-base font-sans text-zinc-800 italic shadow-sm leading-relaxed">
+            <div className="p-4 sm:p-5 bg-zinc-50 border-l-2 border-black rounded-r-md text-sm text-zinc-700 italic leading-relaxed">
               {profileData.bio.quote}
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-2 flex flex-wrap items-center gap-3 font-mono text-xs">
+            <div className="pt-2 flex flex-wrap items-center gap-3 text-sm">
               <a
                 href="#work"
-                className="inline-flex items-center space-x-2 px-5 py-3 bg-black text-white font-bold hover:bg-zinc-800 transition-all border border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,0.3)] active:translate-x-0.5 active:translate-y-0.5"
+                className="inline-flex items-center space-x-2 px-5 py-2.5 bg-black text-white font-medium hover:bg-zinc-800 transition-colors rounded shadow-sm"
               >
-                <span>Explore Impact & AI Workflows</span>
-                <ArrowDown size={14} />
+                <span>View Practice Impact</span>
+                <ArrowDown size={15} />
               </a>
 
               <a
                 href={profileData.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-5 py-3 bg-white text-black font-bold hover:bg-zinc-100 transition-colors border border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5"
+                className="inline-flex items-center space-x-2 px-5 py-2.5 bg-white text-black font-medium hover:bg-zinc-100 transition-colors border border-zinc-300 rounded shadow-sm"
               >
-                <FileText size={14} />
-                <span>Online Resume</span>
-                <ExternalLink size={12} className="text-zinc-500" />
+                <FileText size={15} />
+                <span>Executive Resume</span>
+                <ExternalLink size={13} className="text-zinc-400" />
               </a>
 
               <a
                 href="#contact"
-                className="inline-flex items-center space-x-2 px-4 py-3 bg-zinc-100 text-zinc-800 hover:text-black hover:bg-zinc-200 transition-colors border border-zinc-300"
+                className="inline-flex items-center space-x-2 px-4 py-2.5 bg-zinc-100 text-zinc-800 hover:text-black hover:bg-zinc-200 transition-colors border border-zinc-200 rounded"
               >
-                <Mail size={14} />
+                <Mail size={15} />
                 <span>Contact</span>
               </a>
 
               <button
                 onClick={copyEmail}
-                className="inline-flex items-center space-x-2 px-4 py-3 bg-zinc-100 text-zinc-800 hover:text-black hover:bg-zinc-200 transition-colors border border-zinc-300"
+                className="inline-flex items-center space-x-2 px-4 py-2.5 bg-zinc-100 text-zinc-800 hover:text-black hover:bg-zinc-200 transition-colors border border-zinc-200 rounded"
               >
-                {copied ? <Check size={14} className="text-black" /> : <Copy size={14} />}
+                {copied ? <Check size={15} className="text-black" /> : <Copy size={15} />}
                 <span>{copied ? "Email copied!" : "Copy Email"}</span>
               </button>
             </div>
           </div>
 
-          {/* Right Column: Responsive Editorial Portrait Frame */}
+          {/* Right Column: Refined Executive Portrait Frame */}
           <div className="lg:col-span-4 flex flex-col items-center lg:items-end">
-            <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none group">
-              {/* Image Frame with Double Border & Offset Drop Shadow */}
-              <div className="relative bg-white p-2 border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-transform duration-200 group-hover:-translate-y-1 group-hover:-translate-x-1 group-hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                {/* Responsive Image Container */}
-                <div className="relative aspect-square w-full bg-zinc-100 overflow-hidden border border-zinc-300">
+            <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none">
+              {/* Image Frame with Clean Border & Subtle Shadow */}
+              <div className="relative bg-white p-2.5 border border-zinc-300 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                {/* Image Container */}
+                <div className="relative aspect-square w-full bg-zinc-100 overflow-hidden rounded">
                   <img
                     src={profileData.avatar}
                     alt={profileData.name}
-                    className="w-full h-full object-cover grayscale contrast-125 transition-all duration-300 group-hover:grayscale-0 group-hover:contrast-100"
+                    className="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-300"
                   />
-                  {/* Corner Registration Marks */}
-                  <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-black pointer-events-none"></div>
-                  <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t-2 border-r-2 border-black pointer-events-none"></div>
-                  <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b-2 border-l-2 border-black pointer-events-none"></div>
-                  <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-black pointer-events-none"></div>
                 </div>
 
-                {/* Editorial Monospace Caption */}
-                <div className="pt-2 pb-0.5 px-1 flex items-center justify-between font-mono text-[11px] text-zinc-600 border-t border-zinc-200 mt-2">
-                  <span className="font-bold text-black uppercase tracking-wider">{profileData.name}</span>
-                  <span className="text-zinc-500 font-mono">ENG LEADER</span>
+                {/* Caption */}
+                <div className="pt-2.5 px-1 flex items-center justify-between text-xs text-zinc-600 border-t border-zinc-100 mt-2">
+                  <span className="font-semibold text-black">{profileData.name}</span>
+                  <span className="text-zinc-500 font-mono text-[11px]">PRACTICE LEADER</span>
                 </div>
               </div>
 
-              {/* Sub-card quick note */}
-              <div className="mt-3 p-3 bg-zinc-50 border border-black font-mono text-[11px] text-zinc-700 flex items-center justify-between shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                <span className="flex items-center space-x-1.5 font-sans font-semibold text-black">
-                  <Users size={14} />
+              {/* Practice Sub-card note */}
+              <div className="mt-3 p-3 bg-zinc-50 border border-zinc-200 rounded-lg text-xs text-zinc-700 flex items-center justify-between shadow-sm">
+                <span className="flex items-center space-x-2 font-medium text-black">
+                  <Users size={15} className="text-zinc-700" />
                   <span>30+ Practice Engineers</span>
                 </span>
-                <span className="text-black font-bold font-mono">98% ON-TIME</span>
+                <span className="text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 text-[11px]">98% On-Time</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Tangible Business Metrics Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-10 mt-8 border-t border-zinc-200">
+        {/* Business Metrics Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 mt-10 border-t border-zinc-200">
           {profileData.metrics.map((m, idx) => (
-            <div key={idx} className="p-4 bg-white border border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-zinc-50 transition-colors">
-              <div className="text-[11px] font-sans text-zinc-500 uppercase tracking-wider">{m.label}</div>
-              <div className="text-xl sm:text-2xl font-sans font-bold text-black mt-1">{m.value}</div>
+            <div key={idx} className="p-4 bg-zinc-50/70 border border-zinc-200 rounded-lg hover:border-zinc-300 transition-colors">
+              <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium">{m.label}</div>
+              <div className="text-2xl font-bold text-black mt-1.5">{m.value}</div>
             </div>
           ))}
         </div>

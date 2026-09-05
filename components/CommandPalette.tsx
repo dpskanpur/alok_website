@@ -76,17 +76,6 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
       }
     },
     {
-      id: "hobbies",
-      category: "Navigation",
-      name: "Reading List, Setup & Curiosities",
-      shortcut: "G I",
-      icon: BookOpen,
-      action: () => {
-        document.getElementById("hobbies")?.scrollIntoView({ behavior: "smooth" });
-        onClose();
-      }
-    },
-    {
       id: "contact",
       category: "Navigation",
       name: "Get in Touch / Direct Channels",
