@@ -2,37 +2,41 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alok.dev"),
+  metadataBase: new URL("https://alokksingh.com"),
   title: {
-    default: "Alok Kumar Singh — Engineering Leader (Cloud Platform & Security)",
+    default: "Alok Kumar Singh — Engineering Leader (Cloud Platform, Security & AI)",
     template: "%s | Alok Kumar Singh",
   },
-  description: "Engineering Leader & Practice Builder at SADA (An Insight Company) driving enterprise Cloud Platform, Zero-Trust Security, and Agentic AI automation.",
+  description: "Engineering Leader & Practice Builder at SADA (An Insight Company) leading 30+ engineers across Google Cloud, AWS, Azure, Zero-Trust Security, and Agentic AI automation.",
   keywords: [
     "Alok Kumar Singh",
     "Engineering Leader",
     "Director of Platform Engineering",
     "Practice Leader",
     "Google Cloud Platform",
+    "AWS",
+    "Microsoft Azure",
+    "Multi-Cloud Architecture",
     "GCP Architect",
     "Cloud Security Engineer",
     "SRE Leader",
     "SADA",
     "Agentic AI",
     "FinOps",
-    "Enterprise Cloud Migration"
+    "Enterprise Cloud Modernization",
+    "Zero-Trust Architecture"
   ],
   authors: [{ name: "Alok Kumar Singh", url: "https://www.linkedin.com/in/aks2103/" }],
   creator: "Alok Kumar Singh",
   publisher: "Alok Kumar Singh",
   alternates: {
-    canonical: "https://alok.dev",
+    canonical: "https://alokksingh.com",
   },
   openGraph: {
-    title: "Alok Kumar Singh — Engineering Leader (Cloud Platform & Security)",
-    description: "Engineering Leader & Practice Builder at SADA driving high-performing teams across Google Cloud, Zero-Trust Security, and Agentic Automation.",
-    url: "https://alok.dev",
-    siteName: "Alok Kumar Singh — Portfolio & Leadership Practice",
+    title: "Alok Kumar Singh — Engineering Leader (Cloud Platform, Security & AI)",
+    description: "Engineering Leader & Practice Builder leading cross-functional practices across Google Cloud, AWS, Azure, Zero-Trust Security, and Agentic Automation.",
+    url: "https://alokksingh.com",
+    siteName: "Alok Kumar Singh — Practice Leadership & Architecture",
     locale: "en_US",
     type: "profile",
     images: [
@@ -46,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alok Kumar Singh — Engineering Leader (Cloud Platform & Security)",
-    description: "Engineering Leader & Practice Builder at SADA driving high-performing teams across Cloud Platform, Security, and Agentic Automation.",
+    title: "Alok Kumar Singh — Engineering Leader (Cloud Platform, Security & AI)",
+    description: "Engineering Leader & Practice Builder leading cross-functional practices across Google Cloud, AWS, Azure, Security, and Agentic Automation.",
     images: ["/images/alok.jpg"],
   },
   robots: {
@@ -72,9 +76,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Alok Kumar Singh",
-  url: "https://alok.dev",
-  image: "https://alok.dev/images/alok.jpg",
-  jobTitle: "Manager, Platform Engineering & Security",
+  url: "https://alokksingh.com",
+  image: "https://alokksingh.com/images/alok.jpg",
+  jobTitle: "Practice Leader / Manager, Platform Engineering & Security",
   worksFor: {
     "@type": "Organization",
     name: "SADA, An Insight Company",
@@ -85,7 +89,10 @@ const jsonLd = {
     "https://flowcv.com/resume/fl37r5sdsr"
   ],
   knowsAbout: [
-    "Google Cloud Platform",
+    "Google Cloud Platform (GCP)",
+    "Amazon Web Services (AWS)",
+    "Microsoft Azure",
+    "Multi-Cloud Engineering",
     "Kubernetes / GKE",
     "Cloud Security & Zero-Trust",
     "Site Reliability Engineering (SRE)",
