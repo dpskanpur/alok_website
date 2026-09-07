@@ -278,6 +278,8 @@ export default function ContactSection() {
                     required
                     rows={4}
                     placeholder="Tell me about your team, leadership role, or cloud modernization initiative..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full p-2.5 bg-zinc-50/80 border border-zinc-200 rounded-lg focus:border-[#4285F4] focus:ring-1 focus:ring-[#4285F4] focus:bg-white focus:outline-none text-black text-xs font-sans resize-none transition-all"
                   />
                 </div>
