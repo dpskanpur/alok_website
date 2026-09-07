@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export default function Header({ onOpenCommand }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-zinc-200">
+    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-zinc-200 shadow-2xs">
       {/* Top 2px Multi-Cloud Accent Bar: GCP Blue/Red/Yellow/Green, AWS Orange, Azure Blue */}
       <div className="h-[2px] w-full flex">
         <div className="flex-1 bg-[#4285F4]"></div>
@@ -20,65 +20,82 @@ export default function Header({ onOpenCommand }: HeaderProps) {
         <div className="flex-1 bg-[#0078D4]"></div>
       </div>
 
-      <div className="px-4 sm:px-6 h-14 flex items-center justify-between font-sans text-xs">
-        {/* Left: Clean Executive Branding */}
+      <div className="px-4 sm:px-6 h-16 flex items-center justify-between font-sans">
+        {/* Left: Prominent Executive Identity */}
         <a 
           href="#" 
-          className="flex items-center space-x-2.5 font-bold tracking-tight text-black hover:opacity-80 transition-opacity shrink-0"
+          className="flex items-center space-x-2.5 tracking-tight text-black hover:opacity-85 transition-opacity shrink-0 group"
         >
-          <span className="w-2.5 h-2.5 rounded-sm bg-gradient-to-tr from-[#4285F4] via-[#0078D4] to-[#FF9900] inline-block shadow-sm"></span>
-          <span className="text-sm tracking-tight font-bold whitespace-nowrap">{profileData.name}</span>
+          <span className="w-3.5 h-3.5 rounded-sm bg-gradient-to-tr from-[#4285F4] via-[#0078D4] to-[#FF9900] inline-block shadow-xs shrink-0 group-hover:scale-105 transition-transform"></span>
+          <span className="text-base sm:text-lg font-bold tracking-tight text-black font-sans whitespace-nowrap">
+            {profileData.name}
+          </span>
         </a>
 
-        {/* Center / Navigation Links: Clean, Un-cramped Single Words */}
-        <nav className="hidden md:flex items-center space-x-6 text-xs font-sans font-medium">
-          <a href="#leadership" className="text-zinc-600 hover:text-black transition-colors whitespace-nowrap">
+        {/* Center: High-Legibility Navigation Links */}
+        <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 text-xs sm:text-[13px] font-semibold text-zinc-700">
+          <a 
+            href="#leadership" 
+            className="px-2.5 py-1.5 rounded-md hover:text-black hover:bg-zinc-100 transition-colors whitespace-nowrap"
+          >
             Leadership
           </a>
-          <a href="#work" className="text-zinc-600 hover:text-black transition-colors whitespace-nowrap">
+          <a 
+            href="#work" 
+            className="px-2.5 py-1.5 rounded-md hover:text-black hover:bg-zinc-100 transition-colors whitespace-nowrap"
+          >
             Initiatives
           </a>
-          <a href="#experience" className="text-zinc-600 hover:text-black transition-colors whitespace-nowrap">
+          <a 
+            href="#experience" 
+            className="px-2.5 py-1.5 rounded-md hover:text-black hover:bg-zinc-100 transition-colors whitespace-nowrap"
+          >
             Experience
           </a>
-          <a href="#stack" className="text-zinc-600 hover:text-black transition-colors whitespace-nowrap">
+          <a 
+            href="#stack" 
+            className="px-2.5 py-1.5 rounded-md hover:text-black hover:bg-zinc-100 transition-colors whitespace-nowrap"
+          >
             Competencies
           </a>
-          <a href="#contact" className="text-zinc-600 hover:text-black transition-colors whitespace-nowrap">
+          <a 
+            href="#contact" 
+            className="px-2.5 py-1.5 rounded-md hover:text-black hover:bg-zinc-100 transition-colors whitespace-nowrap"
+          >
             Contact
           </a>
         </nav>
 
-        {/* Right: Action Buttons */}
+        {/* Right: High-Contrast Executive Actions */}
         <div className="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
           {/* Resume link */}
           <a
             href={profileData.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-1.5 px-3 py-1.5 border border-zinc-300 hover:border-black rounded-lg text-xs font-sans text-zinc-800 hover:text-black transition-colors whitespace-nowrap shrink-0"
+            className="inline-flex items-center space-x-1.5 px-3 py-1.5 border border-zinc-300 hover:border-black rounded-lg text-xs sm:text-[13px] font-semibold text-zinc-800 hover:text-black transition-colors whitespace-nowrap shrink-0 shadow-2xs"
           >
-            <FileText size={13} />
+            <FileText size={14} className="text-zinc-600" />
             <span className="hidden sm:inline">Resume</span>
           </a>
 
           {/* 15-min Sync Quick Action */}
           <a
             href="#contact"
-            className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 bg-black text-white hover:bg-zinc-800 rounded-lg text-xs font-sans font-medium transition-colors shadow-xs whitespace-nowrap shrink-0"
+            className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 bg-black text-white hover:bg-zinc-800 rounded-lg text-xs sm:text-[13px] font-semibold transition-all shadow-xs whitespace-nowrap shrink-0"
           >
-            <Calendar size={13} className="text-[#4285F4] shrink-0" />
+            <Calendar size={14} className="text-[#4285F4] shrink-0" />
             <span>Book Sync</span>
           </a>
 
           {/* Command Menu Button */}
           <button
             onClick={onOpenCommand}
-            className="hidden sm:flex items-center space-x-1 px-2.5 py-1.5 text-xs border border-zinc-300 hover:border-black rounded-lg text-zinc-700 hover:text-black bg-zinc-50 hover:bg-zinc-100 transition-all font-sans shrink-0 cursor-pointer"
+            className="hidden sm:flex items-center space-x-1 px-2.5 py-1.5 text-xs border border-zinc-300 hover:border-black rounded-lg text-zinc-700 hover:text-black bg-zinc-50 hover:bg-zinc-100 transition-all font-sans shrink-0 cursor-pointer shadow-2xs"
             title="Open Quick Navigation Menu (⌘K)"
           >
             <Command size={12} />
-            <span className="text-[11px] font-mono text-zinc-500 font-semibold">K</span>
+            <span className="text-[11px] font-mono text-zinc-600 font-semibold">K</span>
           </button>
         </div>
       </div>
