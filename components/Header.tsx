@@ -59,14 +59,14 @@ export default function Header({ onOpenCommand }: HeaderProps) {
         </div>
 
         {/* Center: Live Timezone Clock */}
-        <div className="hidden md:flex items-center space-x-1.5 text-zinc-800 text-[11px] bg-zinc-50 px-2.5 py-1 border border-zinc-200 rounded shadow-xs font-mono">
+        <div className="hidden xl:flex items-center space-x-1.5 text-zinc-800 text-[11px] bg-zinc-50 px-2.5 py-1 border border-zinc-200 rounded-lg shadow-xs font-mono">
           <Clock size={12} className="text-zinc-600" />
           <span className="text-zinc-500 font-sans">IST:</span>
           <span suppressHydrationWarning className="font-semibold tracking-wider">{time || "00:00:00"}</span>
         </div>
 
         {/* Right: Section Links & Command Menu Trigger */}
-        <div className="flex items-center space-x-5">
+        <div className="flex items-center space-x-3 sm:space-x-4">
           <nav className="hidden lg:flex items-center space-x-5 text-xs font-sans font-medium">
             <a href="#leadership" className="text-zinc-600 hover:text-black transition-colors">
               Leadership
@@ -90,7 +90,7 @@ export default function Header({ onOpenCommand }: HeaderProps) {
             href={profileData.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 border border-zinc-300 hover:border-black rounded text-xs font-sans text-zinc-800 hover:text-black transition-colors"
+            className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 border border-zinc-300 hover:border-black rounded-lg text-xs font-sans text-zinc-800 hover:text-black transition-colors whitespace-nowrap shrink-0"
           >
             <FileText size={13} />
             <span>Resume</span>
@@ -99,20 +99,20 @@ export default function Header({ onOpenCommand }: HeaderProps) {
           {/* 15-min Sync Quick Action */}
           <a
             href="#contact"
-            className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-black text-white hover:bg-zinc-800 rounded text-xs font-sans font-medium transition-colors shadow-xs"
+            className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 bg-black text-white hover:bg-zinc-800 rounded-lg text-xs font-sans font-medium transition-colors shadow-xs whitespace-nowrap shrink-0"
           >
-            <Calendar size={12} className="text-[#4285F4]" />
-            <span>Book 15m Sync</span>
+            <Calendar size={13} className="text-[#4285F4] shrink-0" />
+            <span>Book Sync</span>
           </a>
 
           {/* Command Menu Button */}
           <button
             onClick={onOpenCommand}
-            className="hidden sm:flex items-center space-x-1.5 px-2.5 py-1.5 text-xs border border-zinc-300 hover:border-black rounded text-zinc-800 hover:text-black bg-zinc-50 hover:bg-zinc-100 transition-all font-sans"
-            title="Open Quick Navigation Menu"
+            className="hidden sm:flex items-center space-x-1 px-2.5 py-1.5 text-xs border border-zinc-300 hover:border-black rounded-lg text-zinc-700 hover:text-black bg-zinc-50 hover:bg-zinc-100 transition-all font-sans shrink-0"
+            title="Open Quick Navigation Menu (⌘K)"
           >
             <Command size={12} />
-            <kbd className="text-[10px] text-zinc-500 font-mono">⌘K</kbd>
+            <span className="text-[11px] font-mono text-zinc-500 font-semibold">K</span>
           </button>
         </div>
       </div>
