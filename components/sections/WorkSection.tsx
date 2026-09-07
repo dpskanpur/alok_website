@@ -100,9 +100,9 @@ export default function WorkSection() {
                 {/* Initiative Header Row */}
                 <div
                   onClick={() => toggleExpand(project.id)}
-                  className="p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between cursor-pointer select-none gap-5"
+                  className="p-5 sm:p-6 flex flex-col md:flex-row md:items-start justify-between cursor-pointer select-none gap-5"
                 >
-                  <div className="space-y-2.5 flex-1">
+                  <div className="space-y-3 flex-1">
                     <div className="flex flex-wrap items-center gap-2 font-sans text-xs">
                       <span className="text-zinc-400 font-mono font-medium text-xs">0{index + 1}</span>
                       <span className={`px-2.5 py-0.5 border text-[10px] uppercase font-semibold rounded-full ${categoryBadgeStyle}`}>
@@ -126,28 +126,31 @@ export default function WorkSection() {
                     </p>
 
                     {/* Measurable Business & Velocity Impact Callout */}
-                    <div className="flex items-center space-x-2.5 text-xs font-sans text-zinc-900 bg-zinc-50 border border-zinc-200/80 px-3.5 py-2 rounded-lg w-fit shadow-xs">
-                      <TrendingUp size={15} className="text-[#34A853] shrink-0" />
-                      <span><strong className="text-black">Impact & ROI:</strong> {project.businessImpact}</span>
+                    <div className="flex items-start space-x-2.5 text-xs font-sans text-zinc-900 bg-zinc-50 border border-zinc-200/80 p-3 rounded-lg w-full max-w-2xl shadow-xs leading-relaxed">
+                      <TrendingUp size={15} className="text-[#34A853] shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-black font-semibold">Impact & ROI: </strong>
+                        <span className="text-zinc-700">{project.businessImpact}</span>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Right Tags & Toggle Button */}
-                  <div className="flex items-center justify-between md:justify-end space-x-3 pt-3 md:pt-0 border-t md:border-t-0 border-zinc-100">
-                    <div className="hidden sm:flex flex-wrap gap-1.5 max-w-xs justify-end">
-                      {project.stack.slice(0, 3).map((st) => (
-                        <span key={st} className="text-[11px] font-sans px-2.5 py-0.5 bg-zinc-50 border border-zinc-200 text-zinc-600 rounded-md">
+                  {/* Right Column: Top-Aligned Blueprint Toggle Button & Domain Pills */}
+                  <div className="flex sm:flex-col items-end justify-between sm:justify-start gap-2.5 shrink-0 pt-2 md:pt-0">
+                    <button
+                      className="px-3.5 py-1.5 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-800 hover:bg-zinc-100 hover:border-zinc-300 transition-colors flex items-center space-x-1.5 text-xs font-medium shadow-2xs"
+                      aria-label="Toggle details"
+                    >
+                      <span className="font-sans text-xs">{isExpanded ? "Collapse" : "Blueprint"}</span>
+                      {isExpanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+                    </button>
+                    <div className="hidden lg:flex flex-wrap gap-1 max-w-[190px] justify-end">
+                      {project.stack.slice(0, 2).map((st) => (
+                        <span key={st} className="text-[10px] font-sans px-2 py-0.5 bg-zinc-50 border border-zinc-200 text-zinc-600 rounded">
                           {st}
                         </span>
                       ))}
                     </div>
-                    <button
-                      className="px-3 py-1.5 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-800 hover:bg-zinc-100 hover:border-zinc-300 transition-colors flex items-center space-x-1 text-xs font-medium"
-                      aria-label="Toggle details"
-                    >
-                      <span className="font-sans text-xs hidden sm:inline">{isExpanded ? "Collapse" : "Blueprint"}</span>
-                      {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                    </button>
                   </div>
                 </div>
 
