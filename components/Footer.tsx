@@ -146,10 +146,19 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <span>Focus: <strong className="text-black">GCP • Security • SRE</strong></span>
+            <span className="flex items-center space-x-1.5">
+              <span>Practice Focus:</span>
+              <strong className="text-black flex items-center space-x-1">
+                <span className="text-[#4285F4]">Cloud</span>
+                <span>•</span>
+                <span className="text-[#FF9900]">Security</span>
+                <span>•</span>
+                <span className="text-[#0078D4]">AI</span>
+              </strong>
+            </span>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center space-x-1 text-black font-bold hover:underline"
+              className="inline-flex items-center space-x-1 text-black font-medium hover:underline"
             >
               <span>Back to top</span>
               <ArrowUp size={11} />

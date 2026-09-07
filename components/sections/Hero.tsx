@@ -157,12 +157,39 @@ export default function Hero() {
 
         {/* Business Metrics Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 mt-10 border-t border-zinc-200">
-          {profileData.metrics.map((m, idx) => (
-            <div key={idx} className="p-4 bg-zinc-50/70 border border-zinc-200 rounded-lg hover:border-zinc-300 transition-colors">
-              <div className="text-xs text-zinc-500 uppercase tracking-wider font-medium">{m.label}</div>
-              <div className="text-2xl font-bold text-black mt-1.5">{m.value}</div>
-            </div>
-          ))}
+          {profileData.metrics.map((m, idx) => {
+            // Distinct multi-cloud color mapping for executive metrics:
+            // 0: Azure Blue (#0078D4) - Engineers Led
+            // 1: Google Green (#34A853) - Enterprise Deliveries
+            // 2: AWS Orange (#FF9900) - Velocity Boost
+            // 3: Google Blue (#4285F4) - Modernization Pipeline
+            const accentColors = [
+              { border: "hover:border-[#0078D4]", text: "text-[#0078D4]", badge: "bg-sky-50 text-[#0078D4]" },
+              { border: "hover:border-[#34A853]", text: "text-[#34A853]", badge: "bg-emerald-50 text-emerald-700" },
+              { border: "hover:border-[#FF9900]", text: "text-[#FF9900]", badge: "bg-amber-50 text-amber-700" },
+              { border: "hover:border-[#4285F4]", text: "text-[#4285F4]", badge: "bg-blue-50 text-[#4285F4]" },
+            ];
+            const currentAccent = accentColors[idx % accentColors.length];
+
+            return (
+              <div 
+                key={idx} 
+                className={`p-4 sm:p-5 bg-white border border-zinc-200/90 rounded-xl hover:shadow-md ${currentAccent.border} transition-all duration-300 group`}
+              >
+                <div className="text-[11px] sm:text-xs text-zinc-500 font-medium uppercase tracking-wider line-clamp-2 min-h-[32px]">
+                  {m.label}
+                </div>
+                <div className="flex items-baseline justify-between mt-2 pt-1 border-t border-zinc-100">
+                  <div className={`text-2xl sm:text-3xl font-bold font-sans tracking-tight text-black group-hover:${currentAccent.text} transition-colors`}>
+                    {m.value}
+                  </div>
+                  <span className={`text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded ${currentAccent.badge}`}>
+                    METRIC 0{idx + 1}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
