@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Command, Clock, FileText } from "lucide-react";
+import { Command, Clock, FileText, Calendar } from "lucide-react";
 import profileData from "@/data/profile.json";
 
 interface HeaderProps {
@@ -68,14 +68,17 @@ export default function Header({ onOpenCommand }: HeaderProps) {
         {/* Right: Section Links & Command Menu Trigger */}
         <div className="flex items-center space-x-5">
           <nav className="hidden lg:flex items-center space-x-5 text-xs font-sans font-medium">
+            <a href="#leadership" className="text-zinc-600 hover:text-black transition-colors">
+              Leadership
+            </a>
             <a href="#work" className="text-zinc-600 hover:text-black transition-colors">
-              Work
+              Initiatives
             </a>
             <a href="#experience" className="text-zinc-600 hover:text-black transition-colors">
-              Experience
+              Track Record
             </a>
             <a href="#stack" className="text-zinc-600 hover:text-black transition-colors">
-              Skills
+              Competencies
             </a>
             <a href="#contact" className="text-zinc-600 hover:text-black transition-colors">
               Contact
@@ -93,15 +96,23 @@ export default function Header({ onOpenCommand }: HeaderProps) {
             <span>Resume</span>
           </a>
 
+          {/* 15-min Sync Quick Action */}
+          <a
+            href="#contact"
+            className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-black text-white hover:bg-zinc-800 rounded text-xs font-sans font-medium transition-colors shadow-xs"
+          >
+            <Calendar size={12} className="text-[#4285F4]" />
+            <span>Book 15m Sync</span>
+          </a>
+
           {/* Command Menu Button */}
           <button
             onClick={onOpenCommand}
-            className="flex items-center space-x-1.5 px-2.5 py-1.5 text-xs border border-zinc-300 hover:border-black rounded text-zinc-800 hover:text-black bg-zinc-50 hover:bg-zinc-100 transition-all font-sans"
+            className="hidden sm:flex items-center space-x-1.5 px-2.5 py-1.5 text-xs border border-zinc-300 hover:border-black rounded text-zinc-800 hover:text-black bg-zinc-50 hover:bg-zinc-100 transition-all font-sans"
             title="Open Quick Navigation Menu"
           >
             <Command size={12} />
-            <span className="font-medium hidden sm:inline">Menu</span>
-            <kbd className="text-[10px] text-zinc-500 font-mono ml-1">⌘K</kbd>
+            <kbd className="text-[10px] text-zinc-500 font-mono">⌘K</kbd>
           </button>
         </div>
       </div>

@@ -8,6 +8,7 @@
   "location": "Chandigarh / Trivandrum, India",
   "timezone": "Asia/Kolkata (UTC+5:30)",
   "resumeUrl": "https://flowcv.com/resume/fl37r5sdsr",
+  "calendarUrl": "https://calendar.google.com/calendar/u/0/r?action=TEMPLATE&text=15-Min+Executive+Sync+with+Alok+Singh&details=Introductory+discussion+on+Cloud+Platform+Engineering,+Zero-Trust+Security,+SRE+or+AI+Automation.&add=aks2103@gmail.com",
   "status": {
     "indicator": "active",
     "text": "Leading Teams in Cloud Platform Engineering, Security & Agentic AI Automation",
@@ -18,6 +19,32 @@
     "intro": "Engineering Leader at SADA (An Insight Company) leading cross-functional practices of 30+ engineers. I blend deep technical architecture in Google Cloud, SRE, and Agentic AI with strategic practice leadership: scaling talent, operationalizing delivery models, and partnering with C-suite executives to translate enterprise technology investments into measurable business expansion ($2M+ influenced, 98% on-time execution).",
     "quote": "\"True practice leadership is where engineering rigor meets strategic business vision: building repeatable architectures, empowering autonomous high-trust teams, and pioneering AI-driven velocity to turn complex technology challenges into durable competitive advantages.\""
   },
+  "leadershipPrinciples": [
+    {
+      "number": "01",
+      "title": "Autonomous High-Trust Pods",
+      "subtitle": "Decentralized Execution with Clear Guardrails",
+      "description": "Structure cross-functional engineering pods with end-to-end ownership. Replace bureaucratic ticketing queues with automated self-service developer platforms and standardized IaC guardrails, enabling 30+ engineers to ship with velocity and autonomy."
+    },
+    {
+      "number": "02",
+      "title": "Reliability as a Core Product",
+      "subtitle": "SRE Rigor & Blameless Cultural Safety",
+      "description": "Operationalize SRE discipline across enterprise deliveries: objective SLIs/SLOs, automated self-healing, and blameless post-mortems that convert critical production incidents into permanent organizational immunity."
+    },
+    {
+      "number": "03",
+      "title": "Applied AI & Operational Velocity",
+      "subtitle": "Eliminating Repetitive Toil via Intelligent Agents",
+      "description": "Pioneer applied agentic AI pipelines for telemetry log synthesis, automated root-cause analysis, and safe remediation runbooks — boosting practice engineering throughput by +30% and freeing engineers to solve high-value problems."
+    },
+    {
+      "number": "04",
+      "title": "People Sponsorship & Talent Bench",
+      "subtitle": "Cultivating Leads into Strategic Principals",
+      "description": "Build resilient, high-retention engineering organizations by investing in deliberate sponsorship, clear engineering career ladders, and aligning individual technical aspirations directly with multi-million dollar business outcomes."
+    }
+  ],
   "metrics": [
     { "label": "Engineers Led Across Platform & Security Practice", "value": "30+" },
     { "label": "Enterprise Client Deliveries (98% On-Time)", "value": "40+" },
@@ -25,11 +52,46 @@
     { "label": "Strategic Modernization Pipelines Influenced", "value": "$2M+" }
   ],
   "certifications": [
-    { "title": "Google Cloud Certified Professional Cloud Architect", "issuer": "Google Cloud" },
-    { "title": "Google Cloud Certified Professional Cloud Security Engineer", "issuer": "Google Cloud" },
-    { "title": "Google Cloud Certified Associate Cloud Engineer", "issuer": "Google Cloud" },
-    { "title": "New Relic Advanced Practitioner", "issuer": "New Relic" },
-    { "title": "LIC Golden Jubilee Scholarship Award", "issuer": "Top 10 Recipients Nationwide" }
+    {
+      "title": "Google Cloud Professional Cloud Architect",
+      "issuer": "Google Cloud",
+      "code": "GCP-PCA",
+      "category": "Architecture",
+      "color": "#4285F4",
+      "verificationUrl": "https://www.linkedin.com/in/aks2103/details/certifications/"
+    },
+    {
+      "title": "Google Cloud Professional Cloud Security Engineer",
+      "issuer": "Google Cloud",
+      "code": "GCP-PCSE",
+      "category": "Security",
+      "color": "#EA4335",
+      "verificationUrl": "https://www.linkedin.com/in/aks2103/details/certifications/"
+    },
+    {
+      "title": "Google Cloud Associate Cloud Engineer",
+      "issuer": "Google Cloud",
+      "code": "GCP-ACE",
+      "category": "Cloud Operations",
+      "color": "#34A853",
+      "verificationUrl": "https://www.linkedin.com/in/aks2103/details/certifications/"
+    },
+    {
+      "title": "New Relic Advanced Practitioner",
+      "issuer": "New Relic",
+      "code": "NR-OBS",
+      "category": "Observability",
+      "color": "#0078D4",
+      "verificationUrl": "https://www.linkedin.com/in/aks2103/details/certifications/"
+    },
+    {
+      "title": "LIC Golden Jubilee Scholarship Award",
+      "issuer": "National Top 10 Recipient",
+      "code": "HONOR",
+      "category": "Academic Distinction",
+      "color": "#FBBC05",
+      "verificationUrl": "https://www.linkedin.com/in/aks2103/details/certifications/"
+    }
   ],
   "socials": [
     { "platform": "LinkedIn", "handle": "in/aks2103", "url": "https://www.linkedin.com/in/aks2103/", "icon": "linkedin" },

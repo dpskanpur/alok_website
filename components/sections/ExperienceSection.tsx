@@ -54,19 +54,30 @@ export default function ExperienceSection() {
                 ? "border-l-4 border-l-[#FF9900]" 
                 : isAzure 
                 ? "border-l-4 border-l-[#0078D4]" 
-                : "border-l-4 border-l-black";
+                : "border-l-4 border-l-[#FBBC05]";
 
               return (
-                <div
+                <a
                   key={idx}
-                  className={`p-3.5 bg-white border border-zinc-200 ${badgeBorder} rounded-lg flex items-start space-x-3 shadow-2xs hover:shadow-xs transition-shadow`}
+                  href={cert.verificationUrl || "https://www.linkedin.com/in/aks2103/details/certifications/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-3.5 bg-white border border-zinc-200 ${badgeBorder} rounded-lg flex items-start justify-between space-x-3 shadow-2xs hover:shadow-xs hover:border-zinc-300 transition-all group`}
                 >
-                  <CheckCircle size={15} className={isGCP ? "text-[#4285F4] shrink-0 mt-0.5" : isAWS ? "text-[#FF9900] shrink-0 mt-0.5" : isAzure ? "text-[#0078D4] shrink-0 mt-0.5" : "text-black shrink-0 mt-0.5"} />
-                  <div className="space-y-0.5">
-                    <div className="font-semibold text-black text-xs leading-snug">{cert.title}</div>
-                    <div className="text-[11px] text-zinc-500 font-sans">{cert.issuer}</div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle size={15} className={isGCP ? "text-[#4285F4] shrink-0 mt-0.5" : isAWS ? "text-[#FF9900] shrink-0 mt-0.5" : isAzure ? "text-[#0078D4] shrink-0 mt-0.5" : "text-[#FBBC05] shrink-0 mt-0.5"} />
+                    <div className="space-y-0.5">
+                      <div className="flex items-center space-x-2">
+                        <span className="font-semibold text-black text-xs leading-snug group-hover:text-[#0078D4] transition-colors">{cert.title}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-[11px] text-zinc-500 font-sans">
+                        <span>{cert.issuer}</span>
+                        {cert.code && <span className="font-mono text-[9px] px-1 bg-zinc-100 rounded text-zinc-600">{cert.code}</span>}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <ExternalLink size={12} className="text-zinc-400 group-hover:text-black shrink-0 mt-0.5 transition-colors" />
+                </a>
               );
             })}
           </div>

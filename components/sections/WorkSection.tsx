@@ -103,11 +103,16 @@ export default function WorkSection() {
                   className="p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between cursor-pointer select-none gap-5"
                 >
                   <div className="space-y-2.5 flex-1">
-                    <div className="flex items-center space-x-2.5 font-sans text-xs">
+                    <div className="flex flex-wrap items-center gap-2 font-sans text-xs">
                       <span className="text-zinc-400 font-mono font-medium text-xs">0{index + 1}</span>
                       <span className={`px-2.5 py-0.5 border text-[10px] uppercase font-semibold rounded-full ${categoryBadgeStyle}`}>
                         {project.category.replace("-", " ")}
                       </span>
+                      {project.metricsBadge && (
+                        <span className="px-2.5 py-0.5 bg-zinc-900 text-white font-mono text-[10px] font-bold rounded-full shadow-xs">
+                          {project.metricsBadge}
+                        </span>
+                      )}
                       <span className="text-zinc-400 font-mono text-xs">{project.year}</span>
                     </div>
 
@@ -149,15 +154,29 @@ export default function WorkSection() {
                 {/* Expanded Deep-Dive Panel */}
                 {isExpanded && (
                   <div className="px-5 sm:px-6 pb-6 pt-4 border-t border-zinc-100 bg-zinc-50/50 rounded-b-xl space-y-5 text-xs">
-                    {/* Architecture Strategy Block */}
-                    <div className="p-4 sm:p-5 bg-white border border-zinc-200 rounded-xl space-y-2 shadow-xs">
-                      <div className="flex items-center space-x-2 font-bold text-black text-xs uppercase tracking-wider font-mono">
-                        <Layers size={14} className="text-[#4285F4]" />
-                        <span>Leadership Strategy & Architectural Execution</span>
+                    {/* Executive ROI & Strategic Challenge Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {project.challenge && (
+                        <div className="p-4 sm:p-5 bg-white border border-rose-200/70 rounded-xl space-y-1.5 shadow-xs">
+                          <div className="flex items-center space-x-1.5 text-[11px] font-mono font-bold text-rose-700 uppercase tracking-wider">
+                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500 inline-block"></span>
+                            <span>Enterprise Challenge & Risk</span>
+                          </div>
+                          <p className="text-zinc-700 text-xs sm:text-sm leading-relaxed font-sans">
+                            {project.challenge}
+                          </p>
+                        </div>
+                      )}
+
+                      <div className="p-4 sm:p-5 bg-white border border-sky-200/70 rounded-xl space-y-1.5 shadow-xs">
+                        <div className="flex items-center space-x-1.5 text-[11px] font-mono font-bold text-[#0078D4] uppercase tracking-wider">
+                          <Layers size={13} className="text-[#0078D4]" />
+                          <span>Strategic Architecture & Delivery</span>
+                        </div>
+                        <p className="text-zinc-700 text-xs sm:text-sm leading-relaxed font-sans">
+                          {project.architecture}
+                        </p>
                       </div>
-                      <p className="text-zinc-700 text-sm leading-relaxed font-sans">
-                        {project.architecture}
-                      </p>
                     </div>
 
                     {/* Code Snippet / Architecture Spec */}

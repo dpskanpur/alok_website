@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import CommandPalette from "@/components/CommandPalette";
 import Hero from "@/components/sections/Hero";
+import LeadershipSection from "@/components/sections/LeadershipSection";
 import WorkSection from "@/components/sections/WorkSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import StackSection from "@/components/sections/StackSection";
@@ -29,6 +30,7 @@ export default function Home() {
         {/* Main Content Sections */}
         <main className="flex-1">
           <Hero />
+          <LeadershipSection />
           <WorkSection />
           <ExperienceSection />
           <StackSection />

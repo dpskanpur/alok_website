@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import profileData from "@/data/profile.json";
-import { ArrowDown, Mail, Copy, Check, MapPin, FileText, ExternalLink, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { ArrowDown, Mail, Copy, Check, MapPin, FileText, ExternalLink, ShieldCheck, Sparkles, Users, Calendar } from "lucide-react";
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
@@ -93,8 +93,8 @@ export default function Hero() {
                 href="#contact"
                 className="inline-flex items-center space-x-1.5 px-3.5 py-2 bg-sky-50 text-[#0078D4] hover:bg-sky-100 transition-colors border border-[#0078D4]/30 rounded whitespace-nowrap shrink-0 font-medium"
               >
-                <Mail size={14} className="text-[#0078D4]" />
-                <span>Contact</span>
+                <Calendar size={14} className="text-[#0078D4]" />
+                <span>Book 15m Sync</span>
               </a>
 
               {/* Google Green Accent Button */}

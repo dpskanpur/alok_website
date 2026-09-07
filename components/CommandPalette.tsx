@@ -9,7 +9,10 @@ import {
   Check, 
   Copy, 
   X,
+  Users,
+  Calendar,
 } from "lucide-react";
+import profileData from "@/data/profile.json";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/icons";
 
 interface CommandPaletteProps {
@@ -42,6 +45,28 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
   };
 
   const actions = [
+    {
+      id: "leadership",
+      category: "Navigation",
+      name: "Leadership Philosophy & Operating Principles",
+      shortcut: "G L",
+      icon: Users,
+      action: () => {
+        document.getElementById("leadership")?.scrollIntoView({ behavior: "smooth" });
+        onClose();
+      }
+    },
+    {
+      id: "schedule-meeting",
+      category: "Actions",
+      name: "Schedule 15-Min Quick Sync (Google Calendar)",
+      shortcut: "S C",
+      icon: Calendar,
+      action: () => {
+        window.open(profileData.calendarUrl, "_blank");
+        onClose();
+      }
+    },
     {
       id: "work",
       category: "Navigation",

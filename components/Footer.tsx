@@ -42,26 +42,32 @@ export default function Footer() {
             </div>
             <ul className="space-y-2 font-mono text-xs">
               <li>
+                <a href="#leadership" className="text-zinc-600 hover:text-black hover:underline flex items-center justify-between">
+                  <span>01. Leadership Principles</span>
+                  <span className="text-zinc-400">↗</span>
+                </a>
+              </li>
+              <li>
                 <a href="#work" className="text-zinc-600 hover:text-black hover:underline flex items-center justify-between">
-                  <span>01. Initiatives & Work</span>
+                  <span>02. Initiatives & ROI</span>
                   <span className="text-zinc-400">↗</span>
                 </a>
               </li>
               <li>
                 <a href="#experience" className="text-zinc-600 hover:text-black hover:underline flex items-center justify-between">
-                  <span>02. Track Record</span>
+                  <span>03. Career Track Record</span>
                   <span className="text-zinc-400">↗</span>
                 </a>
               </li>
               <li>
                 <a href="#stack" className="text-zinc-600 hover:text-black hover:underline flex items-center justify-between">
-                  <span>03. Competencies</span>
+                  <span>04. Competencies</span>
                   <span className="text-zinc-400">↗</span>
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-zinc-600 hover:text-black hover:underline flex items-center justify-between">
-                  <span>04. Direct Contact</span>
+                  <span>05. Book 15m Sync</span>
                   <span className="text-zinc-400">↗</span>
                 </a>
               </li>
