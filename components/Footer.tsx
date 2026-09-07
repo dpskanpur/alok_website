@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import profileData from "@/data/profile.json";
-import { ArrowUp, Mail, Copy, Check, ExternalLink, ShieldCheck, MapPin, Award } from "lucide-react";
+import { ArrowUp, Mail, Copy, Check, ExternalLink, ShieldCheck, MapPin, Award, FileText } from "lucide-react";
 import { LinkedinIcon } from "@/components/icons";
 
 export default function Footer() {
@@ -121,7 +121,7 @@ export default function Footer() {
                 className="p-2.5 bg-zinc-50 border border-zinc-300 hover:border-black flex items-center justify-between transition-colors group shadow-sm"
               >
                 <div className="flex items-center space-x-2">
-                  <Mail size={14} />
+                  <FileText size={14} className="text-[#D97706]" />
                   <span className="font-bold text-black text-xs">FlowCV Resume</span>
                 </div>
                 <ExternalLink size={12} className="text-zinc-400 group-hover:text-black" />

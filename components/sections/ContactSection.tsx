@@ -20,6 +20,7 @@ import { LinkedinIcon } from "@/components/icons";
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [activationRequired, setActivationRequired] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -74,26 +75,36 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      // Send directly via mailto URI with full content pre-filled
-      const subject = encodeURIComponent(`Executive Inquiry: ${formData.name} via alokksingh.com`);
-      const body = encodeURIComponent(
-        `Hi Alok,\n\n${formData.message}\n\n---\nSender Details:\nName: ${formData.name}\nEmail: ${formData.email}\nSecurity: Math Verified (${captchaNum1} + ${captchaNum2} = ${expected})`
-      );
-      
-      // Trigger user's mail client (works 100% reliably across macOS, iOS, Windows, Android)
-      const mailtoLink = `mailto:aks2103@gmail.com?subject=${subject}&body=${body}`;
-      
-      const link = document.createElement("a");
-      link.href = mailtoLink;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Direct async dispatch through /api/contact to FormSubmit
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          honeypot,
+          captchaAnswer: userCaptchaAnswer,
+          captchaExpected: expected,
+        }),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok && !result.message?.includes("Activation")) {
+        throw new Error(result.message || "Failed to deliver message. Please try again.");
+      }
+
+      if (result.message && result.message.includes("Activation")) {
+        setActivationRequired(true);
+      } else {
+        setActivationRequired(false);
+      }
 
       setFormSubmitted(true);
-    } catch (err) {
-      setFormError("Could not open mail client. Please click 'Copy Email' to reach out directly.");
+    } catch (err: any) {
+      console.error("Form submit error:", err);
+      setFormError(err.message || "Could not deliver message right now. Please email aks2103@gmail.com directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -181,14 +192,16 @@ export default function ContactSection() {
                 </a>
 
                 <a
-                  href="mailto:aks2103@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=aks2103@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-between p-3.5 bg-white border border-zinc-200 rounded-xl hover:border-zinc-300 hover:shadow-xs transition-all group"
                 >
                   <div className="flex items-center space-x-2.5">
                     <Mail size={16} className="text-[#4285F4]" />
                     <div>
-                      <div className="text-black font-semibold text-xs">Send Email</div>
-                      <div className="text-[11px] text-zinc-500 font-mono">aks2103@gmail.com</div>
+                      <div className="text-black font-semibold text-xs">Open in Gmail Web</div>
+                      <div className="text-[11px] text-zinc-500 font-mono">mail.google.com</div>
                     </div>
                   </div>
                   <ArrowUpRight size={14} className="text-zinc-400 group-hover:text-black transition-colors" />
@@ -222,23 +235,42 @@ export default function ContactSection() {
             </div>
 
             {formSubmitted ? (
-              <div className="py-12 text-center space-y-3">
+              <div className="py-8 text-center space-y-3">
                 <div className="inline-flex p-3 bg-emerald-50 rounded-full text-emerald-600 border border-emerald-200">
                   <Check size={24} />
                 </div>
-                <h4 className="text-base font-sans font-bold text-black">Message Sent Successfully</h4>
-                <p className="text-xs text-zinc-600 font-sans max-w-xs mx-auto">
-                  Thank you for reaching out! I have received your message and will respond within 24 hours.
-                </p>
-                <button
-                  onClick={() => {
-                    setFormSubmitted(false);
-                    setFormData({ name: "", email: "", message: "" });
-                  }}
-                  className="px-4 py-2 bg-black text-white font-medium text-xs hover:bg-zinc-800 transition-colors rounded-lg"
-                >
-                  Send another message
-                </button>
+                <h4 className="text-base font-sans font-bold text-black">
+                  {activationRequired ? "Submission Sent — Activation Pending" : "Message Delivered Successfully"}
+                </h4>
+
+                {activationRequired ? (
+                  <div className="p-3.5 bg-amber-50 border border-amber-200 text-amber-900 rounded-lg text-xs font-sans max-w-sm mx-auto text-left space-y-1.5">
+                    <p className="font-semibold text-amber-950 flex items-center space-x-1.5">
+                      <span>One-Time Form Activation Link Sent</span>
+                    </p>
+                    <p className="text-[11px] text-amber-800 leading-relaxed">
+                      FormSubmit dispatched an initial <strong>&quot;Activate Form&quot;</strong> link to <strong>aks2103@gmail.com</strong>. Check your Gmail inbox (or Spam/Updates) and click the link once to authorize inbox forwarding. All incoming messages will arrive automatically!
+                    </p>
+                  </div>
+                ) : (
+                  <p className="text-xs text-zinc-600 font-sans max-w-xs mx-auto leading-relaxed">
+                    Thank you for reaching out! Your message was submitted directly to <strong>aks2103@gmail.com</strong> without opening any popup or mail client. I will respond within 24 hours.
+                  </p>
+                )}
+
+                <div className="pt-2">
+                  <button
+                    onClick={() => {
+                      setFormSubmitted(false);
+                      setActivationRequired(false);
+                      setFormData({ name: "", email: "", message: "" });
+                      setUserCaptchaAnswer("");
+                    }}
+                    className="px-4 py-2 bg-black text-white font-medium text-xs hover:bg-zinc-800 transition-colors rounded-lg"
+                  >
+                    Send another message
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
