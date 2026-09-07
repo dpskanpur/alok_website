@@ -8,16 +8,16 @@ export default function StackSection() {
       <div className="w-full">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-6 mb-8 border-b border-zinc-200 gap-4">
-          <div>
+          <div className="max-w-xl">
             <div className="text-xs font-mono text-[#0078D4] font-bold tracking-widest uppercase mb-1.5">
               Practice Leadership & Architecture Stack
             </div>
-            <h2 className="text-2xl sm:text-3xl font-sans font-bold text-black tracking-tight">
-              Leadership Capabilities, Cloud Architecture & AI
+            <h2 className="text-2xl sm:text-3xl font-sans font-bold text-black tracking-tight text-balance">
+              Leadership, Cloud Architecture & AI
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-zinc-600 font-sans max-w-sm">
-            From organizational design, pre-sales and FinOps to zero-trust cloud infrastructure and applied agentic workflows.
+          <p className="text-xs sm:text-sm text-zinc-600 font-sans max-w-sm sm:text-right">
+            From organizational design and FinOps to zero-trust cloud infrastructure and applied agentic workflows.
           </p>
         </div>
 
